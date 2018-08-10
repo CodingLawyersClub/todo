@@ -1,5 +1,5 @@
 # Running
-- Clone template frontend: `git clone git@github.com:dbarabander/template-frontend todo`
+- Clone template frontend: `git clone git@github.com:CodingLawyersClub/template-frontend todo`
 - `cd todo`
 - `yarn`
 - `yarn start`
