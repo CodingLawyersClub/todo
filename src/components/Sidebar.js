@@ -47,10 +47,28 @@ var styles = {
 export default class Sidebar extends Component {
   
     render () {
+      const { userStore } = this.props;
+      const { currentUser } = userStore;
       return (
         <SidebarResponsiveContainer>
           <Menu right styles={styles} {...this.props}>
             <Flex>
+              {currentUser &&
+                <Navlinkcontainer >
+                  <NavLink href="/account">
+                    <Avatar size={40} user={currentUser}/>
+                  </NavLink>
+                </Navlinkcontainer>}
+                {!currentUser &&
+                <Navlinkcontainer>
+                  <NavLink key={"/register"} href={"/register"}>Sign Up</NavLink>
+                </Navlinkcontainer>
+                }
+              {!currentUser &&
+                <Navlinkcontainer>
+                  <NavLink key={"/login"} href={"/login"}>Login</NavLink>
+                </Navlinkcontainer>
+              }
             </Flex>
           </Menu>
         </SidebarResponsiveContainer>
