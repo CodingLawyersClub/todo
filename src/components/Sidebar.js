@@ -3,12 +3,20 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { inject, observer } from 'mobx-react';
 import Menu from 'react-burger-menu/lib/menus/slide'
-import { Flex } from 'rebass';
+import NavLink from '../components/NavLink';
+import { Box, Flex } from 'rebass';
+import Avatar from './Avatar';
 
 const SidebarResponsiveContainer = styled.div`
     ${breakpoint('desktop') `
         display: none;
     `}
+`
+
+const Navlinkcontainer = Box.extend`
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
 `
 
 var styles = {
